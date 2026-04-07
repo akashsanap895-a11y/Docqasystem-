@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DocQA System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📄 DocQA System</h1>
+  <p>AI Powered Document Question Answering</p>
+</header>
+
+<section class="upload">
+  <h2>Upload PDF</h2>
+  <input type="file" id="pdfUpload">
+</section>
+
+<section class="chat">
+  <div id="chatBox"></div>
+
+  <div class="inputArea">
+    <input type="text" id="userInput" placeholder="Ask question from document...">
+    <button onclick="sendMessage()">Ask</button>
+    <button onclick="summarize()">Summarize</button>
+    <button onclick="keyPoints()">Key Points</button>
+  </div>
+</section>
+
+<section class="info">
+  <h2>About Project</h2>
+  <p>This system uses AI techniques like embeddings, FAISS, Redis and LLM to answer questions from PDF documents.</p>
+
+  <h3>Features</h3>
+  <ul>
+    <li>Semantic Search</li>
+    <li>Fast Retrieval</li>
+    <li>AI Chat Interface</li>
+    <li>Summarization</li>
+  </ul>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
