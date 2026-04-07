@@ -1,46 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DocQA System</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docqasystem</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-<header>
-  <h1>📄 DocQA System</h1>
-  <p>AI Powered Document Question Answering</p>
-</header>
-
-<section class="upload">
-  <h2>Upload PDF</h2>
-  <input type="file" id="pdfUpload">
-</section>
-
-<section class="chat">
-  <div id="chatBox"></div>
-
-  <div class="inputArea">
-    <input type="text" id="userInput" placeholder="Ask question from document...">
-    <button onclick="sendMessage()">Ask</button>
-    <button onclick="summarize()">Summarize</button>
-    <button onclick="keyPoints()">Key Points</button>
-  </div>
-</section>
-
-<section class="info">
-  <h2>About Project</h2>
-  <p>This system uses AI techniques like embeddings, FAISS, Redis and LLM to answer questions from PDF documents.</p>
-
-  <h3>Features</h3>
-  <ul>
-    <li>Semantic Search</li>
-    <li>Fast Retrieval</li>
-    <li>AI Chat Interface</li>
-    <li>Summarization</li>
-  </ul>
-</section>
-
-<script src="script.js"></script>
+    <header>
+        <h1>Welcome to Docqasystem</h1>
+        <nav>
+            <ul>
+                <li><a href="#upload">Upload</a></li>
+                <li><a href="#chat">Chat</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech-stack">Tech Stack</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="upload">
+            <h2>Upload Your Document</h2>
+            <form>
+                <input type="file" name="document" accept=".pdf,.docx,.txt">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+        <section id="chat">
+            <h2>Chat Interface</h2>
+            <div class="chat-interface">
+                <div class="messages">
+                    <div class="message">User: Hello</div>
+                    <div class="message">Support: Hi there!</div>
+                </div>
+                <input type="text" placeholder="Type your message here...">
+                <button>Send</button>
+            </div>
+        </section>
+        <section id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>User-Friendly Upload Section</li>
+                <li>Real-time Chat Interface</li>
+                <li>Document Analysis and Feedback</li>
+            </ul>
+        </section>
+        <section id="tech-stack">
+            <h2>Tech Stack</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Node.js for backend</li>
+                <li>WebSocket for real-time communication</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Docqasystem. All rights reserved.</p>
+    </footer>
+    <style>
+        body { background-color: #121212; color: #f1f1f1; font-family: Arial, sans-serif; }
+        header { background: #1e1e1e; padding: 20px; text-align: center; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin: 0 15px; }
+        a { color: #f1f1f1; text-decoration: none; }
+        main { padding: 20px; }
+        footer { text-align: center; padding: 20px; background: #1e1e1e; }
+        .chat-interface { background: #232323; padding: 15px; border-radius: 5px; }
+        .messages { max-height: 300px; overflow-y: auto; }
+        .message { margin: 5px 0; }
+    </style>
 </body>
 </html>
